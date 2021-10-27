@@ -68,6 +68,7 @@ else
 	@false
 endif
 
+.PHONY: biglib
 biglib: $(SUBDIRS_LIB)
 ifeq ($(KALDI_FLAVOR), dynamic)
 ifeq ($(shell uname), Darwin)
@@ -82,6 +83,7 @@ endif
 endif
 endif
 
+.PHONY: biglibext
 biglibext: $(EXT_SUBDIRS_LIB)
 ifeq ($(KALDI_FLAVOR), dynamic)
 ifeq ($(shell uname), Darwin)
@@ -100,6 +102,7 @@ kaldi.mk:
 	@[ -f kaldi.mk ] || { echo "kaldi.mk does not exist; you have to run ./configure"; exit 1; }
 
 # Compile optional stuff
+.PHONY: ext check_portaudio clean distclean test ext_test
 ext: ext_depend $(SUBDIRS) $(EXT_SUBDIRS)
 	-echo Done
 
@@ -122,6 +125,8 @@ ext_test: $(addsuffix /test, $(EXT_SUBDIRS_LIB))
 %/test: % mklibdir
 	$(MAKE) -C $< test
 
+
+.PHONY: cudavalgrind valgrind depend ext_depend
 cudavalgrind:
 	-for x in $(CUDAMEMTESTDIR); do $(MAKE) -C $$x valgrind || { echo "valgrind on $$x failed"; exit 1; }; done
 

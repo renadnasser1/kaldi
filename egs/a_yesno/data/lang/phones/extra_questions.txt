@@ -1,0 +1,9 @@
+Y_B N_B 
+Y_E N_E 
+Y_I N_I 
+Y_S N_S 
+SIL sil spn 
+SIL_B sil_B spn_B 
+SIL_E sil_E spn_E 
+SIL_I sil_I spn_I 
+SIL_S sil_S spn_S 

@@ -1,0 +1,66 @@
+# lattice-best-path --lm-scale=17 --word-symbol-table=exp/tri1/graph/words.txt "ark:gunzip -c exp/tri1/decode/lat.*.gz|" ark,t:exp/tri1/decode/scoring/17.tra 
+# Started at Wed Oct 27 13:37:20 +03 2021
+#
+lattice-best-path --lm-scale=17 --word-symbol-table=exp/tri1/graph/words.txt 'ark:gunzip -c exp/tri1/decode/lat.*.gz|' ark,t:exp/tri1/decode/scoring/17.tra 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_0_0_0_0_0_0, best cost 813.216 + 51167.8 = 51981 over 668 frames.
+1_0_0_0_0_0_0_0 YES NO NO NO NO NO NO NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_0_0_0_0_0_1, best cost 810.399 + 52871.6 = 53682 over 672 frames.
+1_0_0_0_0_0_0_1 YES NO NO NO NO NO NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_0_0_0_0_1_1, best cost 726.312 + 48143.8 = 48870.1 over 625 frames.
+1_0_0_0_0_0_1_1 YES NO NO NO NO NO YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_0_0_1_0_0_1, best cost 679.608 + 48181.1 = 48860.7 over 621 frames.
+1_0_0_0_1_0_0_1 YES NO NO NO YES NO NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_0_1_0_1_1_1, best cost 774.871 + 53405.1 = 54180 over 613 frames.
+1_0_0_1_0_1_1_1 YES NO NO YES YES NO YES YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_1_0_1_0_0_1, best cost 672.259 + 39507.5 = 40179.7 over 492 frames.
+1_0_1_0_1_0_0_1 YES NO YES NO YES NO NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_1_1_0_1_1_1, best cost 681.974 + 46512.1 = 47194.1 over 594 frames.
+1_0_1_1_0_1_1_1 YES NO YES YES NO YES YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_1_1_1_0_1_0, best cost 772.669 + 47544.7 = 48317.4 over 596 frames.
+1_0_1_1_1_0_1_0 YES NO YES YES YES NO YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_0_1_1_1_1_0_1, best cost 739.539 + 49735 = 50474.5 over 640 frames.
+1_0_1_1_1_1_0_1 YES NO YES YES YES YES NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_0_0_0_0_1, best cost 737.9 + 50292.5 = 51030.4 over 606 frames.
+1_1_0_0_0_0_0_1 YES YES NO NO NO NO NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_0_0_1_1_1, best cost 690.714 + 48504.8 = 49195.5 over 616 frames.
+1_1_0_0_0_1_1_1 YES YES NO NO NO YES YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_0_1_0_1_0, best cost 643.704 + 49203.6 = 49847.3 over 570 frames.
+1_1_0_0_1_0_1_0 NO YES NO YES NO NO YES NO YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_0_1_0_1_1, best cost 721.718 + 47060.3 = 47782 over 612 frames.
+1_1_0_0_1_0_1_1 YES YES NO NO YES NO YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_0_1_1_1_0, best cost 732.469 + 48296.4 = 49028.9 over 616 frames.
+1_1_0_0_1_1_1_0 YES YES NO NO YES YES YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_1_0_1_0_0, best cost 716.1 + 42499.5 = 43215.6 over 546 frames.
+1_1_0_1_0_1_0_0 YES YES NO YES NO YES NO NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_1_0_1_1_0, best cost 722.405 + 46306.6 = 47029 over 599 frames.
+1_1_0_1_0_1_1_0 YES YES NO YES NO YES YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_1_1_0_0_1, best cost 740.313 + 51165.6 = 51905.9 over 612 frames.
+1_1_0_1_1_0_0_1 YES YES NO YES YES NO NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_1_1_0_1_1, best cost 686.314 + 45653.5 = 46339.8 over 585 frames.
+1_1_0_1_1_0_1_1 YES YES NO YES YES NO YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_0_1_1_1_1_0, best cost 678.772 + 51165 = 51843.8 over 619 frames.
+1_1_0_1_1_1_1_0 NO NO YES YES NO YES YES YES YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_0_0_0_0_1, best cost 675.543 + 46601.5 = 47277 over 602 frames.
+1_1_1_0_0_0_0_1 YES YES YES NO NO NO NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_0_0_1_0_1, best cost 754.972 + 48713.2 = 49468.2 over 633 frames.
+1_1_1_0_0_1_0_1 YES YES YES NO NO YES NO YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_0_0_1_1_1, best cost 822.334 + 46613.4 = 47435.8 over 569 frames.
+1_1_1_0_0_1_1_1 YES YES YES NO NO YES YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_0_1_0_1_0, best cost 665.101 + 48151.5 = 48816.6 over 605 frames.
+1_1_1_0_1_0_1_0 YES YES YES NO YES NO YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_0_1_0_1_1, best cost 689.493 + 48110 = 48799.5 over 620 frames.
+1_1_1_0_1_0_1_1 YES YES YES NO YES NO YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_1_0_0_1_0, best cost 812.654 + 51886.2 = 52698.9 over 670 frames.
+1_1_1_1_0_0_1_0 YES YES YES YES NO NO YES NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_1_0_1_0_0, best cost 743.999 + 45041.8 = 45785.8 over 538 frames.
+1_1_1_1_0_1_0_0 YES YES YES YES YES NO YES NO NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_1_1_0_0_0, best cost 675.85 + 51203.7 = 51879.5 over 612 frames.
+1_1_1_1_1_0_0_0 NO NO YES YES YES YES YES NO NO NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_1_1_1_0_0, best cost 740.17 + 52056 = 52796.1 over 656 frames.
+1_1_1_1_1_1_0_0 YES YES YES YES YES YES NO NO 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:99) For utterance 1_1_1_1_1_1_1_1, best cost 922.063 + 48693.2 = 49615.3 over 644 frames.
+1_1_1_1_1_1_1_1 YES YES YES YES YES YES YES YES 
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:124) Overall cost per frame is 80.762 = 1.20353 [graph] + 79.5585 [acoustic] over 17651 frames.
+LOG (lattice-best-path[5.5.987~1-eb8d0]:main():lattice-best-path.cc:128) Done 29 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Oct 27 13:37:20 +03 2021, elapsed time 0 seconds

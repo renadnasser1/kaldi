@@ -1,0 +1,4 @@
+!SIL 1.0	sil
+<UNK> 1.0	spn
+YES 1.0	Y
+NO 1.0	N

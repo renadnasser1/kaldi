@@ -1,0 +1,5 @@
+# cat exp/mono/decode/scoring/13.tra | utils/int2sym.pl -f 2- exp/mono/graph/words.txt | sed s:\<UNK\>::g | compute-wer --text --mode=present ark:exp/mono/decode/scoring/test_filt.txt ark,p:- >& exp/mono/decode/wer_13 
+# Started at Wed Oct 27 13:36:43 +03 2021
+#
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Oct 27 13:36:44 +03 2021, elapsed time 0 seconds

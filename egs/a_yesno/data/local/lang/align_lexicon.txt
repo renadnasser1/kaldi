@@ -1,0 +1,5 @@
+!SIL sil_S
+<UNK> spn_S
+YES Y_S
+NO N_S
+<eps> SIL

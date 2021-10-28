@@ -1,0 +1,16 @@
+ 1083  ./run.sh
+ 1084  cd local
+ 1085  pwd
+ 1086  ls 
+ 1087  cd data
+ 1088  ls
+ 1089  cd local 
+ 1090  ls -l
+ 1091  chmod +xwr score.sh
+ 1092   ls -l
+ 1093  ./run.sh
+ 1094  cd ../
+ 1095  cd ../
+ 1096  ./run.sh
+ 1097  ../../src/latbin/lattice-best-path ark:'gunzip -c exp/tri1/decode/lat.1.gz |' 'ark,t:| utils/int2sym.pl -f 2- exp/tri1/graph/words.txt > out.txt'\n
+ 1098  history 

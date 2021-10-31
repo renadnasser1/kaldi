@@ -1,0 +1,1 @@
+%WER 4.74 [ 11 / 232, 11 in , 0 del, 0  ub ] experiment/nnet2/nnet2_ imple/decode/wer_10

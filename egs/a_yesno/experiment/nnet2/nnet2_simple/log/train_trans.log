@@ -1,0 +1,12 @@
+# nnet-train-transitions experiment/nnet2/nnet2_simple/0.mdl "ark:gunzip -c exp/tri1/ali.*.gz|" experiment/nnet2/nnet2_simple/0.mdl 
+# Started at Sun Oct 31 14:52:11 +03 2021
+#
+nnet-train-transitions experiment/nnet2/nnet2_simple/0.mdl 'ark:gunzip -c exp/tri1/ali.*.gz|' experiment/nnet2/nnet2_simple/0.mdl 
+LOG (nnet-train-transitions[5.5.987~1-eb8d0]:main():nnet-train-transitions.cc:118) Accumulated transition stats from 31 utterances.
+LOG (nnet-train-transitions[5.5.987~1-eb8d0]:MleUpdate():transition-model.cc:528) TransitionModel::Update, objf change is 0.613887 per frame over 18996 frames. 
+LOG (nnet-train-transitions[5.5.987~1-eb8d0]:MleUpdate():transition-model.cc:531) 4 probabilities floored, 101 out of 115 transition-states skipped due to insuffient data (it is normal to have some skipped.)
+LOG (nnet-train-transitions[5.5.987~1-eb8d0]:main():nnet-train-transitions.cc:125) Transition model update: average 0.613887 log-like improvement per frame over 18996 frames.
+LOG (nnet-train-transitions[5.5.987~1-eb8d0]:main():nnet-train-transitions.cc:131) Setting priors of pdfs in the model.
+LOG (nnet-train-transitions[5.5.987~1-eb8d0]:main():nnet-train-transitions.cc:140) Trained transitions of neural network model and wrote it to experiment/nnet2/nnet2_simple/0.mdl
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sun Oct 31 14:52:11 +03 2021, elapsed time 0 seconds

@@ -1,0 +1,36 @@
+# nnet-latgen-faster-parallel --max-active=500 --min-active=200 --beam=8 --lattice-beam=3 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri1/graph/words.txt experiment/nnet2/nnet2_simple/final.mdl exp/tri1/graph/HCLG.fst "ark,s,cs:copy-feats scp:data/test/split4/4/feats.scp ark:- |" "ark:|gzip -c > experiment/nnet2/nnet2_simple/decode/lat.4.gz" 
+# Started at Sun Oct 31 14:39:38 +03 2021
+#
+nnet-latgen-faster-parallel --max-active=500 --min-active=200 --beam=8 --lattice-beam=3 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri1/graph/words.txt experiment/nnet2/nnet2_simple/final.mdl exp/tri1/graph/HCLG.fst 'ark,s,cs:copy-feats scp:data/test/split4/4/feats.scp ark:- |' 'ark:|gzip -c > experiment/nnet2/nnet2_simple/decode/lat.4.gz' 
+copy-feats scp:data/test/split4/4/feats.scp ark:- 
+WARNING (copy-feats[5.5.987~1-eb8d0]:Open():util/kaldi-table-inl.h:106) Failed to open script file data/test/split4/4/feats.scp
+ERROR (copy-feats[5.5.987~1-eb8d0]:SequentialTableReader():util/kaldi-table-inl.h:860) Error constructing TableReader: rspecifier is scp:data/test/split4/4/feats.scp
+
+[ Stack-Trace: ]
+0   libkaldi-base.dylib                 0x0000000105bf865f kaldi::KaldiGetStackTrace() + 63
+1   libkaldi-base.dylib                 0x0000000105bf83d2 kaldi::MessageLogger::LogMessage() const + 354
+2   copy-feats                          0x0000000104f0b318 kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&) + 24
+3   copy-feats                          0x0000000104f1ada7 kaldi::SequentialTableReader<kaldi::KaldiObjectHolder<kaldi::Matrix<float> > >::SequentialTableReader(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 151
+4   copy-feats                          0x0000000104f0b109 kaldi::SequentialTableReader<kaldi::KaldiObjectHolder<kaldi::Matrix<float> > >::SequentialTableReader(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 9
+5   copy-feats                          0x0000000104f0a828 main + 2392
+6   libdyld.dylib                       0x00007fff20520621 start + 1
+7   ???                                 0x0000000000000003 0x0 + 3
+
+kaldi::KaldiFatalErrorWARNING (nnet-latgen-faster-parallel[5.5.987~1-eb8d0]:Close():kaldi-io.cc:515) Pipe copy-feats scp:data/test/split4/4/feats.scp ark:- | had nonzero return status 65280
+ERROR (nnet-latgen-faster-parallel[5.5.987~1-eb8d0]:~SequentialTableReaderArchiveImpl():util/kaldi-table-inl.h:678) TableReader: error detected closing archive 'copy-feats scp:data/test/split4/4/feats.scp ark:- |'
+
+[ Stack-Trace: ]
+0   libkaldi-base.dylib                 0x000000011211365f kaldi::KaldiGetStackTrace() + 63
+1   libkaldi-base.dylib                 0x00000001121133d2 kaldi::MessageLogger::LogMessage() const + 354
+2   nnet-latgen-faster-parallel         0x000000010ee35258 kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&) + 24
+3   nnet-latgen-faster-parallel         0x000000010ee45026 kaldi::SequentialTableReaderArchiveImpl<kaldi::KaldiObjectHolder<kaldi::Matrix<float> > >::~SequentialTableReaderArchiveImpl() + 214
+4   nnet-latgen-faster-parallel         0x000000010ee447b9 kaldi::SequentialTableReaderArchiveImpl<kaldi::KaldiObjectHolder<kaldi::Matrix<float> > >::~SequentialTableReaderArchiveImpl() + 9
+5   nnet-latgen-faster-parallel         0x000000010ee447ce kaldi::SequentialTableReaderArchiveImpl<kaldi::KaldiObjectHolder<kaldi::Matrix<float> > >::~SequentialTableReaderArchiveImpl() + 14
+6   nnet-latgen-faster-parallel         0x000000010ee47462 kaldi::SequentialTableReader<fst::VectorFstTplHolder<fst::ArcTpl<fst::TropicalWeightTpl<float> > > >::~SequentialTableReader() + 18
+7   nnet-latgen-faster-parallel         0x000000010ee35619 kaldi::SequentialTableReader<fst::VectorFstTplHolder<fst::ArcTpl<fst::TropicalWeightTpl<float> > > >::~SequentialTableReader() + 9
+8   nnet-latgen-faster-parallel         0x000000010ee341c8 main + 2584
+9   libdyld.dylib                       0x00007fff20520621 start + 1
+
+libc++abi.dylib: terminating with uncaught exception of type kaldi::KaldiFatalError: kaldi::KaldiFatalError
+# Accounting: time=0 threads=1
+# Ended (code 134) at Sun Oct 31 14:39:38 +03 2021, elapsed time 0 seconds

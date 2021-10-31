@@ -1,0 +1,15 @@
+# nnet-get-egs --left-context=4 --right-context=4 "ark,s,cs:copy-feats scp:data/train/split1/1/feats.scp ark:- |" "ark,s,cs:gunzip -c exp/tri1/ali.1.gz | ali-to-pdf exp/tri1/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |" ark:- | nnet-copy-egs ark:- ark:experiment/nnet2/nnet2_simple/egs/egs_orig.1.1.ark ark:experiment/nnet2/nnet2_simple/egs/egs_orig.2.1.ark ark:experiment/nnet2/nnet2_simple/egs/egs_orig.3.1.ark ark:experiment/nnet2/nnet2_simple/egs/egs_orig.4.1.ark 
+# Started at Sun Oct 31 14:52:08 +03 2021
+#
+nnet-copy-egs ark:- ark:experiment/nnet2/nnet2_simple/egs/egs_orig.1.1.ark ark:experiment/nnet2/nnet2_simple/egs/egs_orig.2.1.ark ark:experiment/nnet2/nnet2_simple/egs/egs_orig.3.1.ark ark:experiment/nnet2/nnet2_simple/egs/egs_orig.4.1.ark 
+nnet-get-egs --left-context=4 --right-context=4 'ark,s,cs:copy-feats scp:data/train/split1/1/feats.scp ark:- |' 'ark,s,cs:gunzip -c exp/tri1/ali.1.gz | ali-to-pdf exp/tri1/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |' ark:- 
+copy-feats scp:data/train/split1/1/feats.scp ark:- 
+ali-to-post ark:- ark:- 
+ali-to-pdf exp/tri1/final.mdl ark:- ark:- 
+LOG (ali-to-pdf[5.5.987~1-eb8d0]:main():ali-to-pdf.cc:68) Converted 31 alignments to pdf sequences.
+LOG (ali-to-post[5.5.987~1-eb8d0]:main():ali-to-post.cc:73) Converted 31 alignments.
+LOG (copy-feats[5.5.987~1-eb8d0]:main():copy-feats.cc:143) Copied 31 feature matrices.
+LOG (nnet-get-egs[5.5.987~1-eb8d0]:main():nnet-get-egs.cc:174) Finished generating examples, successfully processed 31 feature files, wrote 18996 examples,  with 18996 egs in total; 0 files had errors.
+LOG (nnet-copy-egs[5.5.987~1-eb8d0]:main():nnet-copy-egs.cc:170) Read 18996 neural-network training examples, wrote 18996
+# Accounting: time=2 threads=1
+# Ended (code 0) at Sun Oct 31 14:52:10 +03 2021, elapsed time 2 seconds
